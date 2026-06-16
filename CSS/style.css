@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
 /* Montserrat Font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -46,9 +52,17 @@ a {
 }
 
 .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
     background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
     color: white;
     padding: 20px;
+}
+
+.site-nav {
+    flex: 1;
 }
 
 .site-nav .nav-list {
@@ -109,7 +123,8 @@ main {
 }
 
 .section-image {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     gap: 1.5rem;
     align-items: center;
 }
