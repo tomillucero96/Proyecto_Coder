@@ -165,7 +165,7 @@ main {
 .section-image {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 2.5rem;
     align-items: center;
 }
 
@@ -176,7 +176,7 @@ main {
 
 .section-habilidades {
     display: grid;
-    gap: 1rem;
+    gap: 2.5rem;
 }
 
 .section-habilidades h3 {
