@@ -10,33 +10,58 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <!--BOOTSTRAP-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-   <header class="site-header">
-    <nav class="site-nav">
-      <ul class="nav-list">
-        <li><a href="../index.html">Portfolio</a></li>
-        <li><a href="inicio.html">Inicio</a></li>
-        <li><a href="proyectos.html">Proyectos</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">Tomas Lucero</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="inicio.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="proyectos.html">Proyectos</a></li>
+            <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
-    <figure>
-      <img src="../assets/L.png" alt="Logotipo de una L y una t que debajo dice Lucero Tomas">
-      <figcaption>Logotipo hecho por Lucero Tomas</figcaption>
-    </figure>
+    <div class="container header-brand py-4">
+      <figure class="m-0">
+        <img class="logo-img" src="../assets/L.png" alt="Logotipo de una L y una T con texto Lucero Tomas">
+        <figcaption>Logotipo de Lucero Tomas</figcaption>
+      </figure>
+    </div>
   </header>
   <main>
-    <section class="section section-sobre-mi">
-      <article>
-        <h1>Sobre Mi</h1>
-        <p>Me gusta mucho el fútbol, soy muy atlético, me ejercito mucho y también me interesa mucho la computadora. Estoy muy metido en la música y en querer emprender siempre.</p>
-      </article>
-      <figure>
-        <img src="../assets/WhatsApp Image 2026-06-02 at 10.58.06 PM (1).jpeg" alt="Fotografía de un chico sentado, vestido de jean y camperón negro">
-        <figcaption>Fotografía modelando para un local de ropa</figcaption>
-      </figure>
+    <section class="section section-sobre-mi py-5">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-6">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body">
+                <h1 class="card-title">Sobre Mi</h1>
+                <p class="lead text-muted">Me gusta mucho el fútbol, soy muy atlético, me ejercito mucho y también me interesa mucho la computadora. Estoy muy metido en la música y en querer emprender siempre.</p>
+                <ul class="list-group list-group-flush mb-4">
+                  <li class="list-group-item">Pasión por el deporte y la música.</li>
+                  <li class="list-group-item">Interés en diseño visual y producción.</li>
+                  <li class="list-group-item">Mentalidad emprendedora y creativa.</li>
+                </ul>
+                <a href="../pages/proyectos.html" class="btn btn-primary btn-custom me-2">Ver proyectos</a>
+                <a href="../pages/contacto.html" class="btn btn-outline-primary">Contactame</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <figure class="m-0">
+              <img src="../assets/WhatsApp Image 2026-06-02 at 10.58.06 PM (1).jpeg" class="img-fluid rounded shadow-sm" alt="Fotografía de un chico sentado, vestido de jean y camperón negro">
+              <figcaption class="text-muted mt-3">Fotografía modelando para un local de ropa</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
   <footer>
@@ -44,5 +69,7 @@
     <p><a href="https://www.tiktok.com/@zeetaka_" target="_blank">TikTok</a></p>
     <p>&copy; 723 - Todos los Derechos Reservados</p>
   </footer>
+  <!--BOOTSTRAP-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
