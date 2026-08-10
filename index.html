@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <!--BOOTSTRAP-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!--CSS-->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="site-header">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html">Tomas Lucero</a>
+        <a class="navbar-brand fw-bold" href="index.html">Tomás Lucero</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -29,77 +27,87 @@
       </div>
     </nav>
     <div class="container header-brand py-4">
-      <figure class="m-0">
-        <img class="logo-img" src="assets/L.png" alt="Logotipo de una L y una T con texto Lucero Tomas">
-        <figcaption>Logotipo de Lucero Tomas</figcaption>
-      </figure>
+      <div class="d-flex flex-column flex-md-row align-items-md-center gap-3">
+        <img class="logo-img" src="assets/L.png" alt="Logotipo de una letra L y T con texto Lucero Tomas">
+        <div>
+          <h1 class="h4 mb-1">Tomás Lucero</h1>
+          <p class="mb-0 text-white-50">Portfolio creativo · Diseño · Música · Web</p>
+        </div>
+      </div>
     </div>
   </header>
+
   <main>
-    <section class="section section-intro py-5">
-      <div class="container">
-        <div class="row align-items-center gy-4">
-          <div class="col-lg-6">
-            <span class="badge rounded-pill bg-secondary mb-3">Portfolio creativo</span>
-            <h1 class="display-5">Hola, soy Tomas Lucero</h1>
-            <p class="lead text-muted">Desarrollo páginas web y trabajo con producción musical, edición de video y contenido visual moderno.</p>
-            <div class="d-flex flex-wrap gap-2">
-              <a href="pages/sobre-mi.html" class="btn btn-primary btn-custom">Conóceme</a>
-              <a href="pages/contacto.html" class="btn btn-outline-primary">Contacto</a>
-            </div>
+    <section class="section">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <span class="badge rounded-pill bg-primary-subtle text-primary-emphasis">Portfolio creativo</span>
+          <h2 class="section-title mt-3">Hola, soy Tomás Lucero</h2>
+          <p class="lead">Desarrollo páginas web, produzco música y creo contenido visual con una identidad moderna y auténtica.</p>
+          <div class="d-flex flex-wrap gap-2 mt-4">
+            <a href="pages/sobre-mi.html" class="btn btn-primary btn-custom">Conóceme</a>
+            <a href="pages/contacto.html" class="btn btn-outline-primary">Contacto</a>
           </div>
-          <div class="col-lg-6">
-            <div class="card border-0 shadow-sm">
-              <img src="assets/Black and White Minimalist Corporate Resume (1).png" class="card-img-top rounded-top" alt="Fotografía representativa de perfil profesional">
-              <div class="card-body">
-                <h2 class="card-title">Identidad profesional</h2>
-                <p class="card-text text-muted">Mi proyecto combina creatividad visual, música y experiencia digital para generar una marca auténtica.</p>
-              </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="card border-0 shadow-sm h-100">
+            <img src="assets/Black and White Minimalist Corporate Resume (1).png" class="card-img-top rounded-top" alt="Fotografía representativa de perfil profesional">
+            <div class="card-body">
+              <h3 class="h5">Identidad profesional</h3>
+              <p class="mb-0">Mi proyecto combina creatividad visual, música y experiencia digital para construir una marca sólida.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="section section-biografia">
-      <h2>Biografia</h2>
-      <p>Nací el 14 de julio del 2007 en San Luis Capital, terminé el secundario y ahora estoy haciendo el curso de desarrollo web flex en Coder House.</p>
-    </section>
-    <section class="section section-habilidades">
-      <h2>Habilidades</h2>
-      <h3>Edicion de Videos</h3>
-      <p>Tengo experiencia editando videos para las redes sociales, por ahora solo para mi.</p>
-      <h3>Productor Musical</h3>
-      <p>Hasta hace poco estoy produciendo música para mí y amigos.</p>
-      <h3>Rapida Adaptacion</h3>
-      <p>Me adapto muy rápido a distintas situaciones o lugares en los que estoy.</p>
-      <h3>Aprendizaje Rapido y Autoaprendisaje</h3>
-      <p>Aprendo rápido sobre muchas cosas a la vez, además de aprender y reflexionar solo.</p>
-    </section>
-    <section class="section section-image py-4">
-      <div class="container">
-        <div class="row align-items-center gy-4">
-          <div class="col-lg-6">
-            <article>
-              <h2>Imagen representativa</h2>
-              <p>Esta fotografía ilustra mi estilo personal y mi interés por el diseño visual.</p>
-            </article>
+
+    <section class="section">
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <h3 class="section-title">Biografía</h3>
+          <p>Nací el 14 de julio del 2007 en San Luis Capital. Terminée el secundario y actualmente estoy desarrollando mi camino en diseño, producción y desarrollo web.</p>
+          <div class="d-flex flex-wrap gap-2 mt-3">
+            <span class="badge rounded-pill bg-light text-dark">Fútbol</span>
+            <span class="badge rounded-pill bg-light text-dark">Música</span>
+            <span class="badge rounded-pill bg-light text-dark">Creatividad</span>
+            <span class="badge rounded-pill bg-light text-dark">Aprendizaje continuo</span>
           </div>
-          <div class="col-lg-6">
-            <figure class="m-0">
-              <img src="assets/Black and White Minimalist Corporate Resume (1).png" class="img-fluid rounded shadow-sm" alt="Fotografía representativa de perfil profesional">
-              <figcaption>Imagen representativa de mi identidad profesional</figcaption>
-            </figure>
+        </div>
+        <div class="col-lg-5">
+          <div class="info-card p-4 rounded-4">
+            <h4 class="h5">Habilidades destacadas</h4>
+            <ul class="list-unstyled mb-0">
+              <li>✦ Edición de video y contenido para redes.</li>
+              <li>✦ Producción musical con enfoque artístico.</li>
+              <li>✦ Adaptación rápida a nuevos desafíos.</li>
+              <li>✦ Aprendizaje constante y automotivado.</li>
+            </ul>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <h3 class="section-title">Imagen representativa</h3>
+          <p>Esta fotografía resume mi estética personal y mi interés por el diseño visual, la identidad y la comunicación.</p>
+        </div>
+        <div class="col-lg-6">
+          <figure class="m-0">
+            <img src="assets/Black and White Minimalist Corporate Resume (1).png" class="img-fluid rounded-4 shadow-sm" alt="Fotografía representativa de perfil profesional">
+          </figure>
         </div>
       </div>
     </section>
   </main>
-  <footer>
-    <p><a href="https://www.instagram.com/tomillucero/" target="_blank">Instagram</a></p>
-    <p><a href="https://www.tiktok.com/@zeetaka_" target="_blank">TikTok</a></p>
-    <p>&copy; 723 - Todos los Derechos Reservados</p>
+
+  <footer class="footer">
+    <p class="mb-2"><a href="https://www.instagram.com/tomillucero/" target="_blank">Instagram</a></p>
+    <p class="mb-2"><a href="https://www.tiktok.com/@zeetaka_" target="_blank">TikTok</a></p>
+    <p class="mb-0">&copy; 723 - Todos los Derechos Reservados</p>
   </footer>
-  <!--BOOTSTRAP-->
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
