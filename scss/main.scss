@@ -1,0 +1,55 @@
+@use 'utilities/variables' as vars;
+@use 'utilities/mixins' as mixins;
+@use 'base/base' as base;
+@use 'base/tipografia' as tipografia;
+@use 'layout/header' as header;
+@use 'layout/nav' as nav;
+@use 'layout/footer' as footer;
+@use 'components/buttons' as buttons;
+@use 'components/cards' as cards;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+.footer {
+  background: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 1.5rem;
+}
+
+.footer a {
+  color: #fff;
+  font-weight: 600;
+}
+
+.footer a:hover {
+  color: var(--secondary-color);
+}
+
+@media (min-width: 768px) {
+  main {
+    padding: 1.25rem 1.5rem 2.25rem;
+  }
+
+  .section {
+    padding: 1.75rem;
+  }
+}
+
+@media (min-width: 992px) {
+  main {
+    padding: 1.5rem 2rem 2.5rem;
+  }
+
+  .section {
+    padding: 2rem;
+  }
+
+  .section-title {
+    font-size: 2.4rem;
+  }
+}
+
+
+

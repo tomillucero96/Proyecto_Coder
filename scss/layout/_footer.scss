@@ -1,0 +1,18 @@
+@use '../utilities/variables' as vars;
+
+.footer {
+  background: vars.$primary-color;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 1.5rem;
+
+  a {
+    color: #fff;
+    font-weight: 600;
+
+    &:hover {
+      color: vars.$secondary-color;
+    }
+  }
+}

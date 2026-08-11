@@ -1,0 +1,33 @@
+@use '../utilities/variables' as vars;
+@use '../utilities/mixins' as mixins;
+
+.btn-custom {
+  @include mixins.button-pill;
+  background-color: vars.$primary-color;
+  color: vars.$bg-light;
+  border: 1px solid vars.$primary-color;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+
+  &:hover,
+  &:focus {
+    background-color: vars.$secondary-color;
+    border-color: vars.$secondary-color;
+    color: vars.$bg-light;
+  }
+}
+
+.btn {
+  &-outline-primary {
+    @include mixins.button-pill;
+    background-color: transparent;
+    border: 1px solid vars.$primary-color;
+    color: vars.$primary-color;
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    &:hover,
+    &:focus {
+      background-color: rgba(vars.$primary-color, 0.1);
+      color: vars.$primary-color;
+    }
+  }
+}

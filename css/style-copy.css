@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: hsl(246, 100%, 24%);
+  --secondary-color: hsl(51, 100%, 65%);
+  --bg-light: hsl(0, 0%, 98%);
+  --bg-surface: hsl(0, 0%, 100%);
+  --text-color: hsl(214, 15%, 18%);
+  --muted-text: hsl(214, 11%, 45%);
+  --border-color: hsl(0, 0%, 87%);
+  --shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+html,
+body {
+  min-height: 100%;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-color);
+}
+
+body {
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+main {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding: 1rem 1rem 2rem;
+}
+
+.site-header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  padding: 0 0 1.25rem;
+}
+
+.navbar {
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 600;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+  color: #fff;
+}
+
+.logo-img {
+  max-width: 110px;
+  height: auto;
+}
+
+.header-brand {
+  padding-top: 1rem;
+}
+
+.header-brand figure {
+  margin: 0;
+}
+
+.header-brand figcaption {
+  margin-top: 0.5rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+}
+
+.section {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  box-shadow: 0 14px 35px var(--shadow-color);
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.section-title {
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.section p,
+.section li {
+  color: var(--muted-text);
+}
+
+.info-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(244, 244, 250, 0.95));
+  border: 1px solid var(--border-color);
+}
+
+.btn-custom {
+  min-width: 160px;
+  border-radius: 999px;
+}
+
+.footer {
+  background: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 1.5rem;
+}
+
+.footer a {
+  color: #fff;
+  font-weight: 600;
+}
+
+.footer a:hover {
+  color: var(--secondary-color);
+}
+
+@media (min-width: 768px) {
+  main {
+    padding: 1.25rem 1.5rem 2.25rem;
+  }
+
+  .section {
+    padding: 1.75rem;
+  }
+}
+
+@media (min-width: 992px) {
+  main {
+    padding: 1.5rem 2rem 2.5rem;
+  }
+
+  .section {
+    padding: 2rem;
+  }
+
+  .section-title {
+    font-size: 2.4rem;
+  }
+}

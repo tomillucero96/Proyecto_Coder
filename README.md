@@ -1,14 +1,29 @@
-RESPUESTAS:
+# Portfolio Tomás Lucero
 
-1_Etiquetas semánticas HTML son:Etiquetas que describen el rol del contenido en la página (mejoran accesibilidad y estructura).Ejemplos: header, nav, main, section, article, aside, footer, figure o figcaption.
+Este proyecto es un sitio web personal tipo portfolio para presentar mi perfil profesional, proyectos, servicios y datos de contacto.
 
-2_Navegación entre archivos:Se hace con links (<a>) usando href para ir entre diferentes paginas del proyecto y tambien para volver a la raiz ( index.html ).
+## Contenido del sitio
 
-3_Incorporacion de fuentes externas: Se usan fuentes cargadas desde afuera mediante @import o <link> (normalmente Google Fonts) en el <head>.
+- Inicio
+- Sobre mí
+- Proyectos
+- Servicios
+- Contacto
 
-4_Estilado de textos con colores y fuentes:En CSS se modifica tipografía y color con propiedades como:
-Color para el color del texto
-Font-family para la fuente
-Font-size para el tamaño
-Font-weight para el grosor
-Line-height para el interlineado
+## Tecnologías utilizadas
+
+- HTML5
+- CSS3
+- Sass
+- Bootstrap 5
+
+## Estructura del proyecto
+
+- index.html: página principal
+- pages/: páginas secundarias del sitio
+- css/: archivos de estilos compilados
+- scss/: archivos fuente de estilos con Sass
+- assets/: imágenes y recursos visuales
+
+
+

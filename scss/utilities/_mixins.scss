@@ -1,0 +1,26 @@
+@use 'variables' as vars;
+
+@mixin responsive-container($top: 1rem, $x: 1rem, $bottom: 2rem) {
+  width: vars.$max-width;
+  margin: 0 auto;
+  padding: $top $x $bottom;
+}
+
+@mixin section-style {
+  background-color: vars.$bg-surface;
+  border: 1px solid vars.$border-color;
+  border-radius: vars.$section-radius;
+  box-shadow: 0 14px 35px vars.$shadow-color;
+  padding: vars.$section-padding;
+  margin-bottom: vars.$section-margin;
+}
+
+@mixin card-surface {
+  background: vars.$card-gradient;
+  border: 1px solid vars.$border-color;
+}
+
+@mixin button-pill {
+  min-width: vars.$btn-min-width;
+  border-radius: vars.$btn-radius;
+}

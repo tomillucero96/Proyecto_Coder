@@ -1,0 +1,20 @@
+@use '../utilities/variables' as vars;
+
+.navbar {
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+
+  .navbar-dark {
+    .navbar-nav {
+      .nav-link {
+        color: rgba(255, 255, 255, 0.92);
+        font-weight: 600;
+
+        &:hover,
+        &:focus {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@use '../utilities/variables' as vars;
+@use '../utilities/mixins' as mixins;
+
+:root {
+  --primary-color: #{vars.$primary-color};
+  --secondary-color: #{vars.$secondary-color};
+  --bg-light: #{vars.$bg-light};
+  --bg-surface: #{vars.$bg-surface};
+  --text-color: #{vars.$text-color};
+  --muted-text: #{vars.$muted-text};
+  --border-color: #{vars.$border-color};
+  --shadow-color: #{vars.$shadow-color};
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100%;
+  font-family: vars.$font-family;
+  background-color: var(--bg-light);
+  color: var(--text-color);
+}
+
+body {
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  @include mixins.responsive-container();
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}

@@ -1,11 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
 :root {
   --primary-color: hsl(246, 100%, 24%);
   --secondary-color: hsl(51, 100%, 65%);
@@ -15,6 +8,12 @@
   --muted-text: hsl(214, 11%, 45%);
   --border-color: hsl(0, 0%, 87%);
   --shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html,
@@ -35,64 +34,25 @@ img {
   height: auto;
 }
 
-a {
-  color: var(--primary-color);
-  text-decoration: none;
-}
-
 main {
   width: min(1200px, 100%);
   margin: 0 auto;
   padding: 1rem 1rem 2rem;
 }
 
-.site-header {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: #fff;
-  padding: 0 0 1.25rem;
+a {
+  color: var(--primary-color);
+  text-decoration: none;
 }
 
-.navbar {
-  padding-top: 0.9rem;
-  padding-bottom: 0.9rem;
+p,
+li {
+  color: hsl(214, 11%, 45%);
 }
 
-.navbar-dark .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.92);
-  font-weight: 600;
-}
-
-.navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .navbar-nav .nav-link:focus {
-  color: #fff;
-}
-
-.logo-img {
-  max-width: 110px;
-  height: auto;
-}
-
-.header-brand {
-  padding-top: 1rem;
-}
-
-.header-brand figure {
-  margin: 0;
-}
-
-.header-brand figcaption {
-  margin-top: 0.5rem;
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 0.95rem;
-}
-
-.section {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-color);
-  border-radius: 24px;
-  box-shadow: 0 14px 35px var(--shadow-color);
-  padding: 1.25rem;
-  margin-bottom: 1.25rem;
+.lead {
+  font-size: 1.05rem;
+  color: hsl(214, 11%, 45%);
 }
 
 .section-title {
@@ -102,19 +62,95 @@ main {
   margin-bottom: 0.75rem;
 }
 
-.section p,
-.section li {
-  color: var(--muted-text);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
 }
 
-.info-card {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(244, 244, 250, 0.95));
-  border: 1px solid var(--border-color);
+.site-header {
+  background: linear-gradient(135deg, hsl(246, 100%, 24%), hsl(51, 100%, 65%));
+  color: #fff;
+  padding: 0 0 1.25rem;
+}
+.site-header .header-brand {
+  padding-top: 1rem;
+}
+.site-header .header-brand figure {
+  margin: 0;
+}
+.site-header .header-brand figcaption {
+  margin-top: 0.5rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+}
+
+.navbar {
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+}
+.navbar .navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 600;
+}
+.navbar .navbar-dark .navbar-nav .nav-link:hover, .navbar .navbar-dark .navbar-nav .nav-link:focus {
+  color: #fff;
+}
+
+.footer {
+  background: hsl(246, 100%, 24%);
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 1.5rem;
+}
+.footer a {
+  color: #fff;
+  font-weight: 600;
+}
+.footer a:hover {
+  color: hsl(51, 100%, 65%);
 }
 
 .btn-custom {
   min-width: 160px;
   border-radius: 999px;
+  background-color: hsl(246, 100%, 24%);
+  color: hsl(0, 0%, 98%);
+  border: 1px solid hsl(246, 100%, 24%);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.btn-custom:hover, .btn-custom:focus {
+  background-color: hsl(51, 100%, 65%);
+  border-color: hsl(51, 100%, 65%);
+  color: hsl(0, 0%, 98%);
+}
+
+.btn-outline-primary {
+  min-width: 160px;
+  border-radius: 999px;
+  background-color: transparent;
+  border: 1px solid hsl(246, 100%, 24%);
+  color: hsl(246, 100%, 24%);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+  background-color: rgba(4.8%, 0%, 48%, 0.1);
+  color: hsl(246, 100%, 24%);
+}
+
+.info-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(244, 244, 250, 0.95));
+  border: 1px solid hsl(0, 0%, 87%);
+  border-radius: 0.5rem;
+}
+
+.card-img-top {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 
 .footer {
@@ -138,22 +174,20 @@ main {
   main {
     padding: 1.25rem 1.5rem 2.25rem;
   }
-
   .section {
     padding: 1.75rem;
   }
 }
-
 @media (min-width: 992px) {
   main {
     padding: 1.5rem 2rem 2.5rem;
   }
-
   .section {
     padding: 2rem;
   }
-
   .section-title {
     font-size: 2.4rem;
   }
 }
+
+/*# sourceMappingURL=style.css.map */

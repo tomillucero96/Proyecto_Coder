@@ -1,0 +1,27 @@
+@use '../utilities/variables' as vars;
+
+p,
+li {
+  color: vars.$muted-text;
+}
+
+.lead {
+  font-size: 1.05rem;
+  color: vars.$muted-text;
+}
+
+.section-title {
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-weight: vars.$heading-weight;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: vars.$heading-weight;
+}

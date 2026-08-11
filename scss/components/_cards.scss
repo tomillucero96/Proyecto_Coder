@@ -1,0 +1,14 @@
+@use '../utilities/variables' as vars;
+@use '../utilities/mixins' as mixins;
+
+.info-card {
+  @include mixins.card-surface;
+  border-radius: vars.$small-radius;
+}
+
+.card {
+  &-img-top {
+    border-top-left-radius: vars.$small-radius;
+    border-top-right-radius: vars.$small-radius;
+  }
+}
