@@ -1,4 +1,5 @@
 @use '../utilities/variables' as vars;
+@use '../utilities/mixins' as mixins;
 
 .site-header {
   background: linear-gradient(135deg, vars.$primary-color, vars.$secondary-color);
@@ -16,6 +17,35 @@
       margin-top: 0.5rem;
       color: rgba(255, 255, 255, 0.85);
       font-size: 0.95rem;
+    }
+
+    .logo-img {
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+      animation: floatIn 0.8s ease both;
+    }
+  }
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@include mixins.respond-to(vars.$tablet) {
+  .site-header {
+    padding-bottom: 1.75rem;
+
+    .header-brand {
+      padding-top: 1.25rem;
     }
   }
 }

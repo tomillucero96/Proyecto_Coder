@@ -11,7 +11,7 @@ li {
 }
 
 .section-title {
-  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-size: clamp(1.5rem, 3vw, 2.15rem);
   font-weight: vars.$heading-weight;
   line-height: 1.2;
   margin-bottom: 0.75rem;
@@ -24,4 +24,5 @@ h4,
 h5,
 h6 {
   font-weight: vars.$heading-weight;
+  color: var(--primary-color);
 }

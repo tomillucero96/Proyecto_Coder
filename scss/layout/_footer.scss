@@ -1,7 +1,8 @@
 @use '../utilities/variables' as vars;
+@use '../utilities/mixins' as mixins;
 
 .footer {
-  background: vars.$primary-color;
+  background: linear-gradient(135deg, vars.$primary-color, #1f2c7a);
   color: #fff;
   text-align: center;
   padding: 1.5rem 1rem;
@@ -14,5 +15,11 @@
     &:hover {
       color: vars.$secondary-color;
     }
+  }
+}
+
+@include mixins.respond-to(vars.$desktop) {
+  .footer {
+    padding: 2rem 1.5rem;
   }
 }

@@ -6,6 +6,19 @@
   padding: $top $x $bottom;
 }
 
+@mixin respond-to($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin flex-center($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+}
+
 @mixin section-style {
   background-color: vars.$bg-surface;
   border: 1px solid vars.$border-color;
@@ -18,6 +31,7 @@
 @mixin card-surface {
   background: vars.$card-gradient;
   border: 1px solid vars.$border-color;
+  box-shadow: 0 14px 30px vars.$shadow-color;
 }
 
 @mixin button-pill {

@@ -4,11 +4,52 @@
 .info-card {
   @include mixins.card-surface;
   border-radius: vars.$small-radius;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+  }
 }
 
 .card {
+  border: 0;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+  }
+
   &-img-top {
     border-top-left-radius: vars.$small-radius;
     border-top-right-radius: vars.$small-radius;
+    object-fit: cover;
+    height: 250px;
+    width: 100%;
   }
+
+  &-body {
+    padding: 1.25rem;
+  }
+}
+
+figure img,
+.img-fluid {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+  display: block;
+  background-color: #f5f5f5;
+}
+
+figure {
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: #f5f5f5;
+}
+
+.card-img-top {
+  object-position: center top;
 }

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Servicios</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -38,27 +39,53 @@
   </header>
 
   <main>
-    <section class="section">
+    <section class="section" data-aos="fade-up">
       <h2 class="section-title">Qué ofrezco</h2>
       <div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
         <div class="col">
-          <div class="info-card p-4 rounded-4 h-100">
+          <div class="info-card p-4 rounded-4 h-100" data-aos="zoom-in">
             <h3 class="h5">Producción musical</h3>
             <p class="mb-0">Producción de beats, mezcla inicial y apoyo creativo para artistas emergentes.</p>
           </div>
         </div>
         <div class="col">
-          <div class="info-card p-4 rounded-4 h-100">
+          <div class="info-card p-4 rounded-4 h-100" data-aos="zoom-in" data-aos-delay="100">
             <h3 class="h5">Edición de video</h3>
             <p class="mb-0">Edición para redes sociales, clips promocionales y material audiovisual con estilo propio.</p>
           </div>
         </div>
         <div class="col">
-          <div class="info-card p-4 rounded-4 h-100">
+          <div class="info-card p-4 rounded-4 h-100" data-aos="zoom-in" data-aos-delay="200">
             <h3 class="h5">Asesoría creativa</h3>
             <p class="mb-0">Acompañamiento para proyectos artísticos, desde contenido hasta formato digital.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section" data-aos="fade-up">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <h3 class="section-title">Mi enfoque de trabajo</h3>
+          <p>Combino creatividad, identidad visual y una mirada estratégica para que cada propuesta se sienta auténtica y profesional.</p>
+        </div>
+        <div class="col-lg-5">
+          <div class="info-card p-4 rounded-4 h-100">
+            <h4 class="h5">¿Qué puedes esperar?</h4>
+            <ul class="mb-0">
+              <li>Comunicación clara y colaboración cercana.</li>
+              <li>Diseño con personalidad y enfoque contemporáneo.</li>
+              <li>Entrega cuidada, ordenada y pensada para tu marca.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" data-aos="fade-up">
+      <div class="info-card p-4 rounded-4">
+        <h3 class="section-title">Cada propuesta tiene carácter</h3>
+        <p class="mb-0">Mi objetivo es que cada servicio se sienta ajustado a la persona, la marca y el contexto en el que se desarrolla.</p>
       </div>
     </section>
   </main>
@@ -70,5 +97,9 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true, offset: 80 });
+  </script>
 </body>
 </html>

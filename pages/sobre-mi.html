@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sobre Mi</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -38,10 +39,10 @@
   </header>
 
   <main>
-    <section class="section">
+    <section class="section" data-aos="fade-up">
       <div class="row align-items-center g-4">
         <div class="col-lg-6">
-          <div class="card border-0 shadow-sm h-100">
+          <div class="card border-0 shadow-sm h-100" data-aos="fade-left">
             <div class="card-body p-4">
               <h2 class="section-title">Una mirada más personal</h2>
               <p class="lead">Me gusta mucho el fútbol, soy muy atlético, me ejercito seguido y también me interesa mucho la computadora. Estoy muy metido en la música y en querer emprender siempre.</p>
@@ -58,29 +59,29 @@
           </div>
         </div>
         <div class="col-lg-6">
-          <figure class="m-0">
+          <figure class="m-0" data-aos="fade-right">
             <img src="../assets/WhatsApp Image 2026-06-02 at 10.58.06 PM (1).jpeg" class="img-fluid rounded-4 shadow-sm" alt="Fotografía de un chico sentado, vestido de jean y camperón negro">
           </figure>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" data-aos="fade-up">
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
-          <div class="info-card p-4 rounded-4 h-100">
+          <div class="info-card p-4 rounded-4 h-100" data-aos="zoom-in">
             <h3 class="h5">Estilo</h3>
             <p class="mb-0">Busco que cada pieza tenga una identidad distinta, limpia y con carácter.</p>
           </div>
         </div>
         <div class="col">
-          <div class="info-card p-4 rounded-4 h-100">
+          <div class="info-card p-4 rounded-4 h-100" data-aos="zoom-in" data-aos-delay="100">
             <h3 class="h5">Proceso</h3>
             <p class="mb-0">Combino ideas, referencias y ejecución para convertir conceptos en resultados claros.</p>
           </div>
         </div>
         <div class="col">
-          <div class="info-card p-4 rounded-4 h-100">
+          <div class="info-card p-4 rounded-4 h-100" data-aos="zoom-in" data-aos-delay="200">
             <h3 class="h5">Objetivo</h3>
             <p class="mb-0">Quiero seguir creciendo en creatividad, tecnología y proyectos con sentido.</p>
           </div>
@@ -96,5 +97,9 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true, offset: 80 });
+  </script>
 </body>
 </html>

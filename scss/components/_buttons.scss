@@ -3,31 +3,41 @@
 
 .btn-custom {
   @include mixins.button-pill;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background-color: vars.$primary-color;
   color: vars.$bg-light;
   border: 1px solid vars.$primary-color;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 
   &:hover,
   &:focus {
+    transform: translateY(-2px);
     background-color: vars.$secondary-color;
     border-color: vars.$secondary-color;
     color: vars.$bg-light;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   }
 }
 
 .btn {
   &-outline-primary {
     @include mixins.button-pill;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background-color: transparent;
     border: 1px solid vars.$primary-color;
     color: vars.$primary-color;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
 
     &:hover,
     &:focus {
-      background-color: rgba(vars.$primary-color, 0.1);
+      transform: translateY(-2px);
+      background-color: rgba(35, 30, 112, 0.08);
       color: vars.$primary-color;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
   }
 }

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+@import url("https://unpkg.com/aos@2.3.4/dist/aos.css");
 :root {
   --primary-color: hsl(246, 100%, 24%);
   --secondary-color: hsl(51, 100%, 65%);
@@ -22,6 +23,7 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: var(--bg-light);
   color: var(--text-color);
+  overflow-x: hidden;
 }
 
 body {
@@ -43,8 +45,45 @@ main {
 a {
   color: var(--primary-color);
   text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+a:hover {
+  color: var(--secondary-color);
 }
 
+.section {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  box-shadow: 0 14px 35px var(--shadow-color);
+}
+
+.section {
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+@media (min-width: 768px) {
+  main {
+    padding: 1.25rem 1.5rem 2.25rem;
+  }
+  .section {
+    padding: 1.75rem;
+  }
+}
+@media (min-width: 992px) {
+  main {
+    padding: 1.5rem 2rem 2.5rem;
+  }
+  .section {
+    padding: 2rem;
+  }
+}
 p,
 li {
   color: hsl(214, 11%, 45%);
@@ -56,7 +95,7 @@ li {
 }
 
 .section-title {
-  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-size: clamp(1.5rem, 3vw, 2.15rem);
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 0.75rem;
@@ -69,6 +108,7 @@ h4,
 h5,
 h6 {
   font-weight: 700;
+  color: var(--primary-color);
 }
 
 .site-header {
@@ -87,21 +127,55 @@ h6 {
   color: rgba(255, 255, 255, 0.85);
   font-size: 0.95rem;
 }
+.site-header .header-brand .logo-img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  animation: floatIn 0.8s ease both;
+}
 
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (min-width: 768px) {
+  .site-header {
+    padding-bottom: 1.75rem;
+  }
+  .site-header .header-brand {
+    padding-top: 1.25rem;
+  }
+}
 .navbar {
   padding-top: 0.9rem;
   padding-bottom: 0.9rem;
 }
+.navbar .navbar-brand {
+  letter-spacing: 0.03em;
+}
 .navbar .navbar-dark .navbar-nav .nav-link {
   color: rgba(255, 255, 255, 0.92);
   font-weight: 600;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 .navbar .navbar-dark .navbar-nav .nav-link:hover, .navbar .navbar-dark .navbar-nav .nav-link:focus {
   color: #fff;
+  transform: translateX(2px);
 }
 
+@media (min-width: 768px) {
+  .navbar-nav .nav-item {
+    margin-left: 0.35rem;
+  }
+}
 .footer {
-  background: hsl(246, 100%, 24%);
+  background: linear-gradient(135deg, hsl(246, 100%, 24%), #1f2c7a);
   color: #fff;
   text-align: center;
   padding: 1.5rem 1rem;
@@ -115,78 +189,156 @@ h6 {
   color: hsl(51, 100%, 65%);
 }
 
+@media (min-width: 992px) {
+  .footer {
+    padding: 2rem 1.5rem;
+  }
+}
 .btn-custom {
   min-width: 160px;
   border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background-color: hsl(246, 100%, 24%);
   color: hsl(0, 0%, 98%);
   border: 1px solid hsl(246, 100%, 24%);
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 .btn-custom:hover, .btn-custom:focus {
+  transform: translateY(-2px);
   background-color: hsl(51, 100%, 65%);
   border-color: hsl(51, 100%, 65%);
   color: hsl(0, 0%, 98%);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .btn-outline-primary {
   min-width: 160px;
   border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background-color: transparent;
   border: 1px solid hsl(246, 100%, 24%);
   color: hsl(246, 100%, 24%);
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
 }
 .btn-outline-primary:hover, .btn-outline-primary:focus {
-  background-color: rgba(4.8%, 0%, 48%, 0.1);
+  transform: translateY(-2px);
+  background-color: rgba(35, 30, 112, 0.08);
   color: hsl(246, 100%, 24%);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .info-card {
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(244, 244, 250, 0.95));
   border: 1px solid hsl(0, 0%, 87%);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
   border-radius: 0.5rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
 }
 
+.card {
+  border: 0;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+}
 .card-img-top {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
+  object-fit: cover;
+  height: 250px;
+  width: 100%;
+}
+.card-body {
+  padding: 1.25rem;
 }
 
-.footer {
-  background: var(--primary-color);
-  color: #fff;
-  text-align: center;
-  padding: 1.5rem 1rem;
-  margin-top: 1.5rem;
+figure img,
+.img-fluid {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+  display: block;
+  background-color: #f5f5f5;
 }
 
-.footer a {
-  color: #fff;
-  font-weight: 600;
+figure {
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: #f5f5f5;
 }
 
-.footer a:hover {
-  color: var(--secondary-color);
+.card-img-top {
+  object-position: center top;
 }
 
-@media (min-width: 768px) {
-  main {
-    padding: 1.25rem 1.5rem 2.25rem;
+body {
+  background: linear-gradient(180deg, #f8f7ff 0%, #fcfcff 100%);
+}
+
+@keyframes subtleFloat {
+  0%, 100% {
+    transform: translateY(0);
   }
-  .section {
-    padding: 1.75rem;
+  50% {
+    transform: translateY(-3px);
   }
 }
-@media (min-width: 992px) {
-  main {
-    padding: 1.5rem 2rem 2.5rem;
-  }
-  .section {
-    padding: 2rem;
-  }
-  .section-title {
-    font-size: 2.4rem;
+.section:hover,
+.card:hover,
+.info-card:hover {
+  animation: subtleFloat 1.2s ease-in-out infinite;
+}
+
+.btn-custom:hover,
+.btn-outline-primary:hover {
+  transform: translateY(-2px);
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: flex-start;
+  margin-top: 1.25rem;
+}
+
+.hero-list {
+  padding-left: 1rem;
+  margin-top: 0.75rem;
+}
+.hero-list li {
+  margin-bottom: 0.4rem;
+}
+
+.form-control {
+  border-radius: 0.85rem;
+  border: 1px solid hsl(0, 0%, 87%);
+  padding: 0.75rem 0.9rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.form-control:focus {
+  border-color: hsl(246, 100%, 24%);
+  box-shadow: 0 0 0 0.2rem rgba(35, 30, 112, 0.15);
+  outline: none;
+}
+
+@media (min-width: 576px) {
+  .hero-actions {
+    gap: 1rem;
   }
 }
 

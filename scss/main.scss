@@ -9,47 +9,65 @@
 @use 'components/cards' as cards;
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+@import url('https://unpkg.com/aos@2.3.4/dist/aos.css');
 
-.footer {
-  background: var(--primary-color);
-  color: #fff;
-  text-align: center;
-  padding: 1.5rem 1rem;
-  margin-top: 1.5rem;
+body {
+  background: linear-gradient(180deg, #f8f7ff 0%, #fcfcff 100%);
 }
 
-.footer a {
-  color: #fff;
-  font-weight: 600;
-}
-
-.footer a:hover {
-  color: var(--secondary-color);
-}
-
-@media (min-width: 768px) {
-  main {
-    padding: 1.25rem 1.5rem 2.25rem;
+@keyframes subtleFloat {
+  0%, 100% {
+    transform: translateY(0);
   }
-
-  .section {
-    padding: 1.75rem;
+  50% {
+    transform: translateY(-3px);
   }
 }
 
-@media (min-width: 992px) {
-  main {
-    padding: 1.5rem 2rem 2.5rem;
-  }
+.section:hover,
+.card:hover,
+.info-card:hover {
+  animation: subtleFloat 1.2s ease-in-out infinite;
+}
 
-  .section {
-    padding: 2rem;
-  }
+.btn-custom:hover,
+.btn-outline-primary:hover {
+  transform: translateY(-2px);
+}
 
-  .section-title {
-    font-size: 2.4rem;
+.hero-actions {
+  @include mixins.flex-center(row);
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: flex-start;
+  margin-top: 1.25rem;
+}
+
+.hero-list {
+  padding-left: 1rem;
+  margin-top: 0.75rem;
+
+  li {
+    margin-bottom: 0.4rem;
   }
 }
 
+.form-control {
+  border-radius: 0.85rem;
+  border: 1px solid vars.$border-color;
+  padding: 0.75rem 0.9rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
+  &:focus {
+    border-color: vars.$primary-color;
+    box-shadow: 0 0 0 0.2rem rgba(35, 30, 112, 0.15);
+    outline: none;
+  }
+}
+
+@include mixins.respond-to(vars.$mobile) {
+  .hero-actions {
+    gap: 1rem;
+  }
+}
 

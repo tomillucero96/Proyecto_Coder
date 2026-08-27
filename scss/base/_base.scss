@@ -24,6 +24,7 @@ body {
   font-family: vars.$font-family;
   background-color: var(--bg-light);
   color: var(--text-color);
+  overflow-x: hidden;
 }
 
 body {
@@ -43,4 +44,48 @@ main {
 a {
   color: var(--primary-color);
   text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    color: var(--secondary-color);
+  }
+}
+
+%panel-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: vars.$section-radius;
+  box-shadow: 0 14px 35px var(--shadow-color);
+}
+
+.section {
+  @extend %panel-card;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  }
+}
+
+@include mixins.respond-to(vars.$tablet) {
+  main {
+    padding: 1.25rem 1.5rem 2.25rem;
+  }
+
+  .section {
+    padding: 1.75rem;
+  }
+}
+
+@include mixins.respond-to(vars.$desktop) {
+  main {
+    padding: 1.5rem 2rem 2.5rem;
+  }
+
+  .section {
+    padding: 2rem;
+  }
 }
